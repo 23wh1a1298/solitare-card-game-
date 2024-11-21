@@ -1,0 +1,29 @@
+# The Y of the top row (4 piles)
+TOP_Y = SCREEN_HEIGHT - MAT_HEIGHT / 2 - MAT_HEIGHT * VERTICAL_MARGIN_PERCENT
+
+# The Y of the middle row (7 piles)
+MIDDLE_Y = TOP_Y - MAT_HEIGHT - MAT_HEIGHT * VERTICAL_MARGIN_PERCENT
+
+# How far apart each pile goes
+X_SPACING = MAT_WIDTH + MAT_WIDTH * HORIZONTAL_MARGIN_PERCENT
+
+
+    def __init__(self):
+        super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
+
+        # Sprite list with all the cards, no matter what pile they are in.
+        self.card_list = None
+
+        arcade.set_background_color(arcade.color.AMAZON)
+
+        # List of cards we are dragging with the mouse
+        self.held_cards = None
+
+        # Original location of cards we are dragging with the mouse in case
+        # they have to go back.
+        self.held_cards_original_position = None
+
+
+        # Sprite list with all the mats tha cards lay on.
+
+        self.pile_mat_list = None
