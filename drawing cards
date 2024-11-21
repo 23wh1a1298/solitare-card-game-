@@ -1,0 +1,9 @@
+    def on_draw(self):
+        """ Render the screen. """
+        # Clear the screen
+        self.clear()
+
+
+        # Draw the cards
+
+        self.card_list.draw()
